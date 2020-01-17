@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.root {
+    padding-top: 56px;
+}
+
+.main-info {
+    padding-top: 20px;
+    min-width: 100%;
+    min-height: 50%;
+    height: 50%;
+    background-color: #dddddd64;
+    margin: auto;
+}
+
+.main-img {
+    background-image: url('../img/mainImg.png');
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    margin: auto;
+}
+
+.city-name-div {
+    margin: auto;
+}
+
+.city-name-div span {
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.temp-min-div {
+    margin: auto;
+}
+
+.temp-max-div {
+    margin: auto;
+}
+
+.margin {
+    margin: auto;
+}
+
+.date span{
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+    color: #ffffffaa;
+}
+
+.temp-span {
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.temp {
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    display: block;
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.description {
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    width: 100%;
+    padding-top: 48px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.temp-comp {
+    margin: auto;
+    text-align: center;
+    padding-top: 48px;
+}
+
+.day-list {
+    max-height: 50%;
+    overflow: auto;
+}
+
+.bottom-line {
+    width: 90%;
+    height: 1px;
+    background-color: #eeeeee;
+    position: static;
+    bottom: 0;
+    margin-top: 20px
+}
+
+.white {
+    color: white;
+}
+
+.more-details {
+    display: block;
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    border: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    font-size: 26px;
+    line-height: 56px;
+    font-family: Helvetica,Arial,sans-serif;
+    margin: 8px 12px;
+    top: 76px;
+    left: 0;
+    text-align: center;
+    cursor: pointer;
+    background-image: url('../img/search.png');
+    background-size: cover;
+    z-index: 4;
+}
+
+.more-details:hover {
+    border-radius: 6px;
+    background-color: #dddddd64;
+}

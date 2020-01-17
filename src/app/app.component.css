@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.background {
+    position: absolute;
+    display: block;
+    background-image: url('/assets/img/background.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    position: fixed;
+    display: block;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+}
+
+.header {
+    position: fixed;
+    min-height: 56px;
+    min-width: 100%;
+    background-color: #3949ab;
+    flex-direction: row;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    min-height: 64px;
+    max-height: 1000px;
+    z-index: 3;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),
+                0 3px 1px -2px rgba(0,0,0,.2),
+                0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.menuButton {
+    display: block;
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    border: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    font-size: 26px;
+    line-height: 56px;
+    font-family: Helvetica,Arial,sans-serif;
+    margin: 8px 12px;
+    top: 0;
+    left: 0;
+    text-align: center;
+    cursor: pointer;
+    background-image: url('/assets/img/search.png');
+    background-size: cover;
+    z-index: 4;
+}
+
+.menuButton:hover {
+    background-color: #001064;
+}
+
+.header-title {
+    display: block;
+    position: relative;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 400;
+    box-sizing: border-box;
+    padding: 16px 16px 0 72px;
+}
