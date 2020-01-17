@@ -1,0 +1,69 @@
+<div class="root">
+    <div class="main-box white margin">
+        <div routerLink="/Home" class="go-back">
+
+        </div>
+        <div class="city-name-div">
+            <span>{{currentWeather?.name}}</span>
+        </div>
+        <div class="date margin">
+            <span>{{currentWeather?.dt_txt}}</span>
+        </div>
+        <div class="title">
+            <span>Mian</span>
+        </div>
+        <div class="box margin">
+            <div class="temp-div inline left">
+                <span class="temp-span">Temp: {{currentWeather?.main.temp - 272.15 | number:0}}°</span>
+            </div>
+            <div class="inline right">
+                <span class="temp-span">Max/Min: {{currentWeather?.main.temp_max - 272.15 | number:0}}°/{{currentWeather.main.temp_min - 272.15 | number:0}}°</span>
+            </div>
+        </div>
+        <div class="box margin">
+            <div class="temp-div inline left">
+                <span class="temp-span">Pressure: {{currentWeather?.main.pressure}}</span>
+            </div>
+            <div class="inline right">
+                <span class="temp-span">Humidity: {{currentWeather?.main.humidity}}</span>
+            </div>
+        </div>
+        <div class="bottom-line margin">
+
+        </div>
+    </div>
+
+    <div class="main-box white margin">
+        <div class="title">
+            <span>Weather</span>
+        </div>
+        <div class="box margin">
+            <div class="icon" [ngStyle]="{'background-image': getIcon(currentWeather.weather[0].icon)}">
+
+            </div>
+        </div>
+        <div class="box margin">
+            <div class="temp-div inline">
+                <span class="temp-span">{{currentWeather?.weather[0].description}}</span>
+            </div>
+        </div>
+        <div class="bottom-line margin">
+
+        </div>
+    </div>
+
+    <div class="main-box white margin">
+        <div class="title">
+            <span>Wind</span>
+        </div>
+        <div class="box margin">
+            <div class="temp-div inline left">
+                <span class="temp-span">Speed: {{currentWeather?.wind.speed}}kmh</span>
+            </div>
+            <div class="inline right">
+                <span class="temp-span">Deg: {{currentWeather?.wind.deg}}°</span>
+            </div>
+        </div>
+    </div>
+
+</div>

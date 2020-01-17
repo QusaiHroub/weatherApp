@@ -1,0 +1,103 @@
+.go-back {
+    display: block;
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    border: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    font-size: 26px;
+    line-height: 56px;
+    font-family: Helvetica,Arial,sans-serif;
+    margin: 8px 12px;
+    top: 70px;
+    left: 0;
+    text-align: center;
+    cursor: pointer;
+    background-image: url('/assets/img/back.png');
+    background-size: cover;
+    z-index: 4;
+}
+
+.go-back:hover {
+    border-radius: 6px;
+    background-color: #dddddd64;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.root {
+    padding-top: 56px;
+}
+
+.margin {
+    margin: auto;
+}
+
+.white {
+    color: white;
+}
+
+.temp-div {
+    padding-right: 20px;
+}
+
+.city-name-div {
+    margin: auto;
+}
+
+.city-name-div span {
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.box {
+    display: block;
+    height: 24px;
+    padding-top: 24px;
+}
+
+.bottom-line {
+    width: 90%;
+    height: 1px;
+    background-color: #eeeeee;
+    position: static;
+    bottom: 0;
+    margin-top: 20px
+}
+
+.main-box {
+    padding-top: 20px;
+    width: 90%;
+    height: 20%;
+    text-align: center;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+}
+
+.title {
+    font-size: 16px;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    background-size: cover;
+    position: relative;
+    top: -25px;
+}
