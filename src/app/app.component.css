@@ -65,6 +65,7 @@
 }
 
 .menuButton:hover {
+    border-radius: 6px;
     background-color: #001064;
 }
 

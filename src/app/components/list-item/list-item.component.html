@@ -1,0 +1,23 @@
+<div class="button-root white">
+    <div class="icon" [ngStyle]="{'background-image': getIcon(day.weather[0].icon)}">
+
+    </div>
+    <div class="info">
+        <div class="inline">
+            <div class="date-div">
+                <p class="date"> {{day?.dt_txt}}</p>
+            </div>
+            <div class="date-div">
+                <p class="date">{{day?.weather[0].description}}</p>
+            </div>
+        </div>
+        <div class="temp-div inline">
+            <span class="temp-span">{{round(day?.main.temp - 272.15)}}°C</span>
+        </div>
+    </div>
+
+    <div class="bottom-line">
+
+    </div>
+
+</div>

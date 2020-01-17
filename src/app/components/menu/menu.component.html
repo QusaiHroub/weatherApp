@@ -1,0 +1,10 @@
+<div class="root" [style.display]="display">
+    <div class="search-box-div margin">
+        <input class="search-box" [(ngModel)]="cityName" placeholder="write to search">
+    </div>
+    <div class="menu margin">
+        <div class="" *ngFor="let city of cities | filter : cityName">
+            <app-menu-item [city]="city"> </app-menu-item>
+        </div>
+    </div>
+</div>

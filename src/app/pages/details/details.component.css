@@ -1,3 +1,24 @@
+.header {
+    position: fixed;
+    min-height: 56px;
+    min-width: 100%;
+    background-color: #3949ab;
+    flex-direction: row;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    min-height: 64px;
+    max-height: 1000px;
+    z-index: 3;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),
+                0 3px 1px -2px rgba(0,0,0,.2),
+                0 1px 5px 0 rgba(0,0,0,.12);
+}
+
 .go-back {
     display: block;
     position: absolute;
@@ -12,7 +33,7 @@
     line-height: 56px;
     font-family: Helvetica,Arial,sans-serif;
     margin: 8px 12px;
-    top: 70px;
+    top: 0;
     left: 0;
     text-align: center;
     cursor: pointer;
@@ -23,14 +44,28 @@
 
 .go-back:hover {
     border-radius: 6px;
-    background-color: #dddddd64;
+    background-color: #001064;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),
+                0 3px 1px -2px rgba(0,0,0,.2),
+                0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.header-title {
+    display: block;
+    position: relative;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 400;
+    box-sizing: border-box;
+    padding: 16px 16px 0 72px;
 }
 
 .inline {
     display: inline-block;
 }
 
-.root {
+.content {
     padding-top: 56px;
 }
 

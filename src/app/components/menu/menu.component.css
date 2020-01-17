@@ -1,0 +1,64 @@
+.menu {
+    width: 90%;
+    height: 510px;
+    overflow: auto;
+    top: 14px;
+    position: relative;
+    padding-right: 8px;
+}
+
+.menu a {
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #ccc;
+}
+
+.root {
+    top: 64px;
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-image: url('/assets/img/background.jpg');
+    display: none;
+}
+
+.margin {
+    margin: auto;
+}
+
+.search-box {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-bottom: 1px solid #dddddd64;
+    display: block;
+    font-size: 1.5rem;
+    line-height: 1rem;
+    margin: 0;
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+    text-align: left;
+    background-color: #3949ab;
+    color: #000000;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),
+                0 3px 1px -2px rgba(0,0,0,.2),
+                0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.search-box-div {
+    width: 100%;
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}

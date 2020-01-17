@@ -1,0 +1,45 @@
+<div class="root">
+    <div class="header">
+        <div class="menu-button" (click)="displayMenu()">
+
+        </div>
+        <div class="header-title">
+            <span> LOCATIONS </span>
+        </div>
+    </div>
+    <div class="content">
+        <div routerLink="/details/0" class="main-info white">
+            <div class="more-details">
+
+            </div>
+            <div class="city-name-div">
+                <span>{{currentWeather?.name}}</span>
+            </div>
+            <div class="date margin">
+                <span>{{getCurrentDate()}}</span>
+            </div>
+            <div class="temp-comp">
+                <div class="main-img inline" [ngStyle]="{'background-image': getIcon(currentWeather.weather[0].icon)}">
+                </div>
+                <div class="inline">
+                    <span class="temp">{{round(currentWeather?.main.temp - 272.15)}}°</span>
+                </div>
+            </div>
+            <div class="temp-div">
+                <span class="temp-span">{{currentWeather?.main.temp_max - 272.15 | number:0}}° / {{currentWeather?.main.temp_min - 272.15 | number:0}}°</span>
+            </div>
+            <div class="temp-div">
+                <span class="description">{{currentWeather?.weather[0].description}}</span>
+            </div>
+            <div class="bottom-line margin">
+
+            </div>
+        </div>
+        <div class="day-list">
+            <div *ngFor="let day of forecast; let i = index">
+                <app-list-item routerLink="/details/{{i+1}}" [day]="day" ></app-list-item>
+            </div>
+        </div>
+        <app-menu [display]="menuDisplay"></app-menu>
+    </div>
+</div>
