@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, Input } from '@angular/core';
+import { Component, OnInit, ElementRef, Input, EventEmitter, Output } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { WeatherService } from './../../services/weather.service';
 
@@ -14,6 +14,7 @@ export class MenuComponent implements OnInit {
     citiesObj: any = <any>{};
 
     @Input() display: string = "none";
+    @Output() locChanged = new EventEmitter<string>();
 
     constructor(private weatherService: WeatherService, private el: ElementRef) {
       this.searchCities();
@@ -27,9 +28,16 @@ export class MenuComponent implements OnInit {
         .subscribe(data => {
           this.citiesObj = data;
           this.cities = this.citiesObj.list;
-          console.log(this.cities);
         }, err => {
             alert('Failed to get weather.' );
         }, () => {})
+    }
+
+    onLocChanged(newLoc: string) {
+        this.changeLoc(newLoc);
+    }
+
+    changeLoc(newLoc: string) {
+      this.locChanged.emit(newLoc);
     }
 }

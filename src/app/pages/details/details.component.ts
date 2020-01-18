@@ -12,6 +12,10 @@ export class DetailsComponent implements OnInit {
   @Input() data: string;
   currentWeather: any = <any>{};
   loc: string;
+  weather: any = <any>[];
+  weatherObj: any = <any>{};
+  main: any = <any>{};
+  wind: any = <any>{};
 
   constructor(private weatherService: WeatherService, private route: ActivatedRoute) {
       this.loc = this.weatherService.getCurrentLoc();
@@ -27,9 +31,13 @@ export class DetailsComponent implements OnInit {
   searchWeather(loc: string) {
     this.currentWeather = {};
     this.weatherService.getCurrentWeather(loc)
-      .subscribe(res => {
+      .subscribe(data => {
           if (this.data == '0') {
-              this.currentWeather = res;
+              this.currentWeather = data;
+              this.main = this.currentWeather.main;
+              this.wind = this.currentWeather.wind;
+              this.weather = this.currentWeather.weather;
+              this.weatherObj = this.weather[0];
           }
       }, err => {
         if (err.error && err.error.message) {
@@ -48,6 +56,9 @@ export class DetailsComponent implements OnInit {
           if (this.data != '0') {
               this.currentWeather = data;
               this.currentWeather = this.filter(this.currentWeather.list)[parseInt(this.data, 10) - 1];
+              this.main = this.currentWeather.main;
+              this.weather = this.currentWeather.weather;
+              this.weatherObj = this.weather[0];
           }
       }, err => {
           alert('Failed to get weather.');

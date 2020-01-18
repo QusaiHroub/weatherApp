@@ -15,6 +15,9 @@ export class HomeComponent implements OnInit {
   forecast: any = <any>[];
   forecastObj: any = <any>{};
   menuDisplay: string = "none";
+  weather: any = <any>[];
+  weatherObj: any = <any>{};
+  main: any = <any>{};
 
   constructor(private weatherService: WeatherService,
               private datePipe: DatePipe) {
@@ -39,6 +42,9 @@ export class HomeComponent implements OnInit {
     this.weatherService.getCurrentWeather(loc)
       .subscribe(res => {
         this.currentWeather = res;
+        this.main = this.currentWeather.main;
+        this.weather = this.currentWeather.weather;
+        this.weatherObj = this.weather[0];
       }, err => {
         if (err.error && err.error.message) {
           alert(err.error.message);
@@ -76,10 +82,17 @@ export class HomeComponent implements OnInit {
 
   displayMenu() {
       if(this.menuDisplay == "none") {
-          this.menuDisplay = "block"
+          this.menuDisplay = "block";
       } else {
-          this.menuDisplay = "none"
+          this.menuDisplay = "none";
       }
+  }
+
+  onLocChanged(newLoc: string) {
+      this.weatherService.setCurrentLoc(newLoc);
+      this.loc = this.weatherService.getCurrentLoc();
+      this.searchWeather(this.loc);
+      this.displayMenu();
   }
 
 }

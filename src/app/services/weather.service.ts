@@ -6,7 +6,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class WeatherService {
-  currentLoc: string = "Hebron, PS";
+  currentLoc: string = "Ar Ramadin,PS";
   currentObjForDet: any;
 
   constructor(private http: HttpClient) { }

@@ -19,17 +19,17 @@
                 <span>{{getCurrentDate()}}</span>
             </div>
             <div class="temp-comp">
-                <div class="main-img inline" [ngStyle]="{'background-image': getIcon(currentWeather.weather[0].icon)}">
+                <div class="main-img inline" [ngStyle]="{'background-image': getIcon(weatherObj.icon)}">
                 </div>
                 <div class="inline">
-                    <span class="temp">{{round(currentWeather?.main.temp - 272.15)}}°</span>
+                    <span class="temp">{{round(main?.temp - 272.15)}}°</span>
                 </div>
             </div>
             <div class="temp-div">
-                <span class="temp-span">{{currentWeather?.main.temp_max - 272.15 | number:0}}° / {{currentWeather?.main.temp_min - 272.15 | number:0}}°</span>
+                <span class="temp-span">{{main?.temp_max - 272.15 | number:0}}° / {{main?.temp_min - 272.15 | number:0}}°</span>
             </div>
             <div class="temp-div">
-                <span class="description">{{currentWeather?.weather[0].description}}</span>
+                <span class="description">{{weatherObj?.description}}</span>
             </div>
             <div class="bottom-line margin">
 
@@ -40,6 +40,6 @@
                 <app-list-item routerLink="/details/{{i+1}}" [day]="day" ></app-list-item>
             </div>
         </div>
-        <app-menu [display]="menuDisplay"></app-menu>
+        <app-menu (locChanged)="onLocChanged($event)" [display]="menuDisplay"></app-menu>
     </div>
 </div>

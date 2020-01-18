@@ -6,7 +6,6 @@ import { StoreModule } from '@ngrx/store';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module'
-import { locationReducer } from './services/location-reducer';
 
 @NgModule({
   declarations: [
@@ -16,10 +15,7 @@ import { locationReducer } from './services/location-reducer';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    PagesModule,
-    StoreModule.forRoot({
-      loc: locationReducer
-    }),
+    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

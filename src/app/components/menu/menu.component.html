@@ -4,7 +4,7 @@
     </div>
     <div class="menu margin">
         <div class="" *ngFor="let city of cities | filter : cityName">
-            <app-menu-item [city]="city"> </app-menu-item>
+            <app-menu-item (locChanged)="onLocChanged($event)" [city]="city"> </app-menu-item>
         </div>
     </div>
 </div>

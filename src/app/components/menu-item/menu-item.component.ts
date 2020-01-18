@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-menu-item',
@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MenuItemComponent implements OnInit {
 
   @Input() city: any;
+  @Output() locChanged = new EventEmitter<string>();
 
   constructor() { }
 
@@ -20,6 +21,10 @@ export class MenuItemComponent implements OnInit {
 
   getIcon(icon: string) {
       return "url(http://openweathermap.org/img/wn/" + icon + "@2x.png)";
+  }
+
+  changeLoc(newLoc: string) {
+    this.locChanged.emit(newLoc);
   }
 
 }
