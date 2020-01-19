@@ -19,6 +19,9 @@ export class DetailsComponent implements OnInit {
 
   constructor(private weatherService: WeatherService, private route: ActivatedRoute) {
       this.loc = this.weatherService.getCurrentLoc();
+      if (!this.loc) {
+          this.loc = this.weatherService.getDefaultLoc();
+      }
       this.searchWeather(this.loc);
   }
 
