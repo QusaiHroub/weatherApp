@@ -4,7 +4,7 @@
             <span class="city-name">{{city?.name}}</span>
         </div>
         <div class="temp-comp right">
-            <div class="main-img inline" [ngStyle]="{'background-image': getIcon(city.weather[0].icon)}">
+            <div class="main-img inline" [ngStyle]="{'background-image': getIcon(city?.weather[0]?.icon)}">
             </div>
             <div class="inline temp-div">
                 <span class="temp">{{round(city?.main.temp - 272.15)}}°</span>

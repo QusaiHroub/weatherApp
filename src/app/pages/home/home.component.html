@@ -19,7 +19,7 @@
                 <span>{{getCurrentDate()}}</span>
             </div>
             <div class="temp-comp">
-                <div class="main-img inline" [ngStyle]="{'background-image': getIcon(weatherObj.icon)}">
+                <div class="main-img inline" [ngStyle]="{'background-image': getIcon(weatherObj?.icon)}">
                 </div>
                 <div class="inline">
                     <span class="temp">{{round(main?.temp - 272.15)}}°</span>
