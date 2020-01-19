@@ -32,6 +32,9 @@ export class MenuComponent implements OnInit {
             .subscribe(data => {
               this.citiesObj = data;
               this.cities = this.citiesObj.list;
+              if (!this.weatherService.getCurrentLoc()) {
+                  this.onLocChanged(this.cities[0].name + ',' + this.cities[0].sys.country);
+              }
             }, err => {
                 alert('Failed to get weather.' );
             }, () => {})

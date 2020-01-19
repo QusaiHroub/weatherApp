@@ -23,6 +23,9 @@ export class HomeComponent implements OnInit {
               private datePipe: DatePipe) {
 
     this.loc = this.weatherService.getCurrentLoc();
+    if (!this.loc) {
+        this.loc = this.weatherService.getDefaultLoc();
+    }
     this.searchWeather(this.loc);
   }
 
@@ -92,7 +95,7 @@ export class HomeComponent implements OnInit {
       this.weatherService.setCurrentLoc(newLoc);
       this.loc = this.weatherService.getCurrentLoc();
       this.searchWeather(this.loc);
-      this.displayMenu();
+      this.menuDisplay = "none";
   }
 
 }

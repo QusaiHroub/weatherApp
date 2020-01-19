@@ -6,9 +6,9 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class WeatherService {
-  currentLoc: string = "Ar Ramadin,PS";
+  currentLoc: string;
   currentObjForDet: any;
-
+  defaultLoc: string = "Hebron,PS";
   constructor(private http: HttpClient) { }
 
   getCurrentWeather(loc: string) {
@@ -43,4 +43,7 @@ export class WeatherService {
       this.currentObjForDet = currentObjForDet;
   }
 
+  getDefaultLoc() {
+      return this.defaultLoc;
+  }
 }
