@@ -6,6 +6,8 @@
         <div class="header-title">
             <span> LOCATIONS </span>
         </div>
+
+        <div class="login-button" (click)="displayLogInForm()">
     </div>
     <div class="content">
         <div routerLink="/details/0" class="main-info white">
@@ -41,5 +43,6 @@
             </div>
         </div>
         <app-menu (locChanged)="onLocChanged($event)" [display]="menuDisplay"></app-menu>
+        <app-log-in [display]="logInDisplay"> </app-log-in>
     </div>
 </div>

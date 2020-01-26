@@ -1,0 +1,31 @@
+<div class="root" [style.display]="display">
+    <div class="margin login">
+        <h1>Login</h1>
+    </div>
+    <form class="login-form margin" (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+        <div class="form-group">
+            <label for="user-email">User Email</label>
+            <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && registerFormControls.email.errors }" />
+            <div *ngIf="submitted && registerFormControls.email.errors" class="invalid-feedback">
+                <div *ngIf="registerFormControls.email.errors.required">Email is required</div>
+                <div *ngIf="registerFormControls.email.errors.maxlength">Email must be at max 180 characters</div>
+                <div *ngIf="registerFormControls.email.errors.email">Email must be a valid email address</div>
+                <div *ngIf="registerFormControls.email.errors.pattern">Email must be end with @pseu.edu</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && registerFormControls.password.errors }" />
+            <div *ngIf="submitted && registerFormControls.password.errors" class="invalid-feedback">
+                <div *ngIf="registerFormControls.password.errors.required">Password is required</div>
+                <div *ngIf="registerFormControls.password.errors.maxlength">Password must be at max 12 characters </div>
+                <div *ngIf="registerFormControls.password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button class="botton">
+                Login
+            </button>
+        </div>
+    </form>
+</div>
