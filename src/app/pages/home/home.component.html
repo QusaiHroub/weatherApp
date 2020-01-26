@@ -22,11 +22,11 @@
                 <div class="main-img inline" [ngStyle]="{'background-image': getIcon(weatherObj?.icon)}">
                 </div>
                 <div class="inline">
-                    <span class="temp">{{round(main?.temp - 272.15)}}°</span>
+                    <span class="temp">{{round(main?.temp - 273.15)}}°</span>
                 </div>
             </div>
             <div class="temp-div">
-                <span class="temp-span">{{main?.temp_max - 272.15 | number:0}}° / {{main?.temp_min - 272.15 | number:0}}°</span>
+                <span class="temp-span">{{main?.temp_max - 273.15 | number:0}}° / {{main?.temp_min - 273.15 | number:0}}°</span>
             </div>
             <div class="temp-div">
                 <span class="description">{{weatherObj?.description}}</span>
