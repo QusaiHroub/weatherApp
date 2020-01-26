@@ -5,19 +5,22 @@ import { ListItemComponent } from './list-item/list-item.component';
 import { MenuComponent } from './menu/menu.component';
 import { MenuItemComponent } from './menu-item/menu-item.component';
 import { FilterPipe } from '../pipes/filter.pipe';
-import { FormsModule } from '@angular/forms';
+import { LogInComponent } from './log-in/log-in.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [ListItemComponent, MenuComponent, MenuItemComponent, FilterPipe],
+  declarations: [ListItemComponent, MenuComponent, MenuItemComponent, FilterPipe, LogInComponent],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
       ListItemComponent,
       MenuComponent,
-      FilterPipe
+      FilterPipe,
+      LogInComponent
   ]
 })
 export class ComponentsModule { }

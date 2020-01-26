@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   forecast: any = <any>[];
   forecastObj: any = <any>{};
   menuDisplay: string = "none";
+  logInDisplay: string = "none";
   weather: any = <any>[];
   weatherObj: any = <any>{};
   main: any = <any>{};
@@ -88,6 +89,14 @@ export class HomeComponent implements OnInit {
           this.menuDisplay = "block";
       } else {
           this.menuDisplay = "none";
+      }
+  }
+
+  displayLogInForm() {
+      if(this.logInDisplay == "none") {
+          this.logInDisplay = "block";
+      } else {
+          this.logInDisplay = "none";
       }
   }
 
